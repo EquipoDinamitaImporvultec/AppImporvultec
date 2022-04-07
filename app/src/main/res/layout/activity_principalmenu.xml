@@ -108,7 +108,7 @@
                             android:src="@drawable/tienda" />
 
                         <Button
-                            android:id="@+id/Opcion1"
+                            android:id="@+id/OpcionProductos"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/Productos"
@@ -129,7 +129,7 @@
                             android:src="@drawable/pedidos" />
 
                         <Button
-                            android:id="@+id/Opcion2"
+                            android:id="@+id/OpcionPedidos"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
@@ -162,7 +162,7 @@
                             android:src="@drawable/charla" />
 
                         <Button
-                            android:id="@+id/Opcion3"
+                            android:id="@+id/OpcionChats"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/Chats"
@@ -215,7 +215,7 @@
                             android:src="@drawable/soporte" />
 
                         <Button
-                            android:id="@+id/Opcion5"
+                            android:id="@+id/OpcionSoporte"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/Soporte"

@@ -6,11 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.appimporvultec.Menu.Producto;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -29,12 +31,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Principal_Menu extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener{
+public class Principal_Menu extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
 
     private ImageView photoImageView;
     private TextView nameTextView;
     private TextView emailTextView;
-
+    private Button btnProductos, btnPedidos, btnChats, btnSoporte;
 
     private GoogleApiClient googleApiClient;
 
@@ -46,6 +48,17 @@ public class Principal_Menu extends AppCompatActivity implements GoogleApiClient
         photoImageView = (ImageView) findViewById(R.id.photoimageView);
         nameTextView = (TextView) findViewById(R.id.nametextView);
         emailTextView = (TextView) findViewById(R.id.emailtextView);
+
+        //BOTONES
+        btnProductos = findViewById(R.id.OpcionProductos);
+        btnPedidos = findViewById(R.id.OpcionPedidos);
+        btnChats = findViewById(R.id.OpcionChats);
+        btnSoporte = findViewById(R.id.OpcionSoporte);
+
+        btnProductos.setOnClickListener(this);
+        btnPedidos.setOnClickListener(this);
+        btnChats.setOnClickListener(this);
+        btnSoporte.setOnClickListener(this);
 
         //GOOGLE
 
@@ -117,5 +130,40 @@ public class Principal_Menu extends AppCompatActivity implements GoogleApiClient
 
     public void revoke(View view){
 
+    }
+    private void goToProductos(){
+        Intent intent = new Intent(Principal_Menu.this, Producto.class);
+        startActivity(intent);
+    }
+
+    private void goToPedidos(){
+
+    }
+
+    private void goToChats(){
+
+    }
+
+    private void goToSoporte(){
+
+    }
+
+    @Override
+    public void onClick(View view) {
+        int id = view.getId();
+        switch (id) {
+            case R.id.OpcionProductos:
+                goToProductos();
+                break;
+            case R.id.OpcionPedidos:
+                goToPedidos();
+                break;
+            case R.id.OpcionChats:
+                goToChats();
+                break;
+            case R.id.OpcionSoporte:
+                goToSoporte();
+                break;
+        }
     }
 }
