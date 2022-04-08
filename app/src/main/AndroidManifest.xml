@@ -12,9 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
-        <activity android:name=".Menu.Producto"></activity>
+        <activity android:name=".IngresoDatos"
+            android:exported="true"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Menu.Producto"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Bienvenida"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,10 +30,12 @@
         </activity>
         <activity
             android:name=".Principal_Menu"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

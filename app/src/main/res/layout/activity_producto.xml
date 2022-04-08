@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#404d5e"
-    tools:context=".Principal_Menu">
+    tools:context=".Menu.Producto">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -13,38 +13,18 @@
         android:fillViewport="true">
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints">
-
-
-            <!--FONDO PORTADA-->
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="center"
-                android:src="@drawable/carruselejemplo1" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
 
             <!--DATOS RECUPERADOS-->
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="20dp"
                 android:orientation="vertical"
                 android:padding="10dp">
-
-                <!--FOTO DE PERFIL-->
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/photoimageView"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="50dp"
-                    android:background="#404d5e"
-                    android:padding="3dp"
-                    android:scaleType="center"/>
 
                 <!--MAS DATOS-->
                 <androidx.appcompat.widget.LinearLayoutCompat
@@ -53,7 +33,7 @@
                     android:layout_marginTop="10dp"
                     android:orientation="vertical">
 
-                    <!--Nombre-->
+                    <!--Categoría-->
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -61,27 +41,11 @@
 
                         <TextView
                             android:id="@+id/nametextView"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Nombre de Usuario"
-                            android:textSize="20dp"
-                            android:textColor="#25CD8A" />
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-
-                    <!--Correo-->
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/emailtextView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Correo de Usuario"
-                            android:textSize="15dp"
-                            android:textColor="#25CD8A" />
+                            android:gravity="center"
+                            android:text="CATEGORÍA"
+                            android:textColor="#000" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -107,14 +71,13 @@
                             android:layout_width="80dp"
                             android:layout_height="100dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/tienda" />
+                            android:src="@drawable/autocaravana" />
 
                         <Button
-                            android:id="@+id/OpcionProductos"
+                            android:id="@+id/Op1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/Productos"
-                            android:background="@drawable/button_rounded_border"
                             android:textColor="#fff" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -129,16 +92,15 @@
                             android:layout_width="80dp"
                             android:layout_height="100dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/pedidos" />
+                            android:src="@drawable/camiongrande" />
 
                         <Button
-                            android:id="@+id/OpcionPedidos"
+                            android:id="@+id/Op2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
                             android:layout_marginLeft="5dp"
                             android:text="@string/Pedidos"
-                            android:background="@drawable/button_rounded_border"
                             android:textColor="#fff" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -163,14 +125,13 @@
                             android:layout_width="80dp"
                             android:layout_height="100dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/charla" />
+                            android:src="@drawable/grua" />
 
                         <Button
-                            android:id="@+id/OpcionChats"
+                            android:id="@+id/Op3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/Chats"
-                            android:background="@drawable/button_rounded_border"
                             android:textColor="#fff" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -185,14 +146,15 @@
                             android:layout_width="80dp"
                             android:layout_height="100dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/soporte" />
+                            android:src="@drawable/motocicleta" />
 
                         <Button
-                            android:id="@+id/OpcionSoporte"
+                            android:id="@+id/Op4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/Soporte"
-                            android:background="@drawable/button_rounded_border"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/Titulo"
                             android:textColor="#fff" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -204,9 +166,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:weightSum="1">
-
-
+                    android:weightSum="2">
 
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="wrap_content"
@@ -218,18 +178,36 @@
                             android:layout_width="80dp"
                             android:layout_height="100dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/cerrarsesion" />
+                            android:src="@drawable/recoger" />
 
                         <Button
-                            android:id="@+id/CerrarSesion"
-                            android:layout_width="200dp"
+                            android:id="@+id/Op5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Soporte"
+                            android:textColor="#fff" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="80dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/todoterreno" />
+
+                        <Button
+                            android:id="@+id/op6"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
                             android:layout_marginLeft="5dp"
-                            android:onClick="logOut"
-                            android:layout_gravity="center"
                             android:text="@string/CerrarSesion"
-                            android:background="@drawable/button_rounded_border"
                             android:textColor="#fff" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -239,7 +217,7 @@
             </androidx.appcompat.widget.LinearLayoutCompat>
 
 
-    </RelativeLayout>
+        </RelativeLayout>
 
     </ScrollView>
 

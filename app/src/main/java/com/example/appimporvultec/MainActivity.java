@@ -64,15 +64,14 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
     private void handleSignInResult(GoogleSignInResult result) {
         if (result.isSuccess()){
-            //CAMBIAR
-             goPrincipalScreen();
+            goToDatos();
         }else{
             Toast.makeText(this, R.string.not_log_in, Toast.LENGTH_SHORT).show();
         }
     }
 
-    private void goPrincipalScreen() {
-        Intent intent = new Intent(this, Principal_Menu.class);
+    private void goToDatos() {
+        Intent intent = new Intent(this, IngresoDatos.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }

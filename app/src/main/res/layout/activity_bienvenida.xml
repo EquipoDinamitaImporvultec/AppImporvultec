@@ -36,7 +36,7 @@
         android:layout_marginTop="521dp"
         android:layout_marginBottom="119dp"
         android:indeterminate="true"
-        android:indeterminateTint="#f5fafb"
+        android:indeterminateTint="#25CD8A"
         android:maxHeight="50dip"
         android:minHeight="50dip" />
 
