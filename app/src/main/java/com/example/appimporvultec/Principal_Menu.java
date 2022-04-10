@@ -10,9 +10,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 import com.bumptech.glide.Glide;
+import com.example.appimporvultec.Menu.Chat;
 import com.example.appimporvultec.Menu.Producto;
+import com.example.appimporvultec.Menu.Soporte;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -23,13 +26,7 @@ import com.google.android.gms.common.api.OptionalPendingResult;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 
-import org.imaginativeworld.whynotimagecarousel.ImageCarousel;
-import org.imaginativeworld.whynotimagecarousel.model.CarouselItem;
 import org.jetbrains.annotations.NotNull;
-
-import java.util.ArrayList;
-import java.util.List;
-
 
 public class Principal_Menu extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
 
@@ -37,6 +34,8 @@ public class Principal_Menu extends AppCompatActivity implements GoogleApiClient
     private TextView nameTextView;
     private TextView emailTextView;
     private Button btnProductos, btnPedidos, btnChats, btnSoporte;
+
+    ViewFlipper v_flipper;
 
     private GoogleApiClient googleApiClient;
 
@@ -48,6 +47,13 @@ public class Principal_Menu extends AppCompatActivity implements GoogleApiClient
         photoImageView = (ImageView) findViewById(R.id.photoimageView);
         nameTextView = (TextView) findViewById(R.id.nametextView);
         emailTextView = (TextView) findViewById(R.id.emailtextView);
+
+        //CARRUSEL
+        int images[] = {R.drawable.carruselejemplo1, R.drawable.carruselejemplo2, R.drawable.carruselejemplo3};
+        v_flipper = findViewById(R.id.Carrusel);
+        for (int image: images){
+            Carrusel(image);
+        }
 
         //BOTONES
         btnProductos = findViewById(R.id.OpcionProductos);
@@ -137,15 +143,18 @@ public class Principal_Menu extends AppCompatActivity implements GoogleApiClient
     }
 
     private void goToPedidos(){
-
+        Intent intent = new Intent(Principal_Menu.this, Chat.class);
+        startActivity(intent);
     }
 
     private void goToChats(){
-
+        Intent intent = new Intent(getApplicationContext(), Chat.class);
+        startActivity(intent);
     }
 
     private void goToSoporte(){
-
+        Intent intent = new Intent(getApplicationContext(), Soporte.class);
+        startActivity(intent);
     }
 
     @Override
@@ -165,5 +174,15 @@ public class Principal_Menu extends AppCompatActivity implements GoogleApiClient
                 goToSoporte();
                 break;
         }
+    }
+
+    public void Carrusel(int image){
+        ImageView imageView = new ImageView(this);
+        imageView.setBackgroundResource(image);
+        v_flipper.addView(imageView);
+        v_flipper.setFlipInterval(3000);
+        v_flipper.setAutoStart(true);
+        v_flipper.setInAnimation(this, android.R.anim.slide_in_left);
+        v_flipper.setOutAnimation(this, android.R.anim.slide_out_right);
     }
 }
