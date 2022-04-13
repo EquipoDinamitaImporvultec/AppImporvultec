@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.appimporvultec" >
+    package="com.example.appimporvultec">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -11,14 +11,24 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Design.NoActionBar" >
-        <activity android:name=".Menu.Soporte"
+        android:theme="@style/Theme.Design.NoActionBar">
+        <activity android:name=".Menu.DetalleItemProducto"
             android:exported="true"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".Menu.Chat"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Menu.DetalleProducto"
             android:exported="true"
             android:screenOrientation="portrait"/>
+        <activity android:name=".Menu.Pedidos"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Menu.Soporte"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Menu.Chat"
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".IngresoDatos"
             android:exported="true"
@@ -38,7 +48,7 @@
         <activity
             android:name=".Bienvenida"
             android:exported="true"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -14,6 +14,7 @@ import android.widget.ViewFlipper;
 
 import com.bumptech.glide.Glide;
 import com.example.appimporvultec.Menu.Chat;
+import com.example.appimporvultec.Menu.Pedidos;
 import com.example.appimporvultec.Menu.Producto;
 import com.example.appimporvultec.Menu.Soporte;
 import com.google.android.gms.auth.api.Auth;
@@ -143,7 +144,7 @@ public class Principal_Menu extends AppCompatActivity implements GoogleApiClient
     }
 
     private void goToPedidos(){
-        Intent intent = new Intent(Principal_Menu.this, Chat.class);
+        Intent intent = new Intent(Principal_Menu.this, Pedidos.class);
         startActivity(intent);
     }
 
