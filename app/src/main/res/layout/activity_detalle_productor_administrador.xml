@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#404d5e"
-    tools:context=".Menu.DetalleItemProducto">
+    tools:context=".MenuAdministrador.DetalleProductorAdministrador">
 
 
     <ScrollView
@@ -18,13 +18,50 @@
             android:layout_height="wrap_content"
             tools:ignore="MissingConstraints">
 
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="500sp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+            <!--MAS DATOS-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:orientation="vertical">
+
+                <!--Categoría-->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewTitulo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="CATEGORÍAS"
+                        android:textSize="20dp"
+                        android:textColor="#25CD8A" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
             <!--DATOS RECUPERADOS-->
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="200dp"
                 android:orientation="vertical"
                 android:padding="10dp">
+
+
+                <!--MENU DE OPCIONES-->
 
                 <!--OPCIONES 1-2-->
                 <androidx.appcompat.widget.LinearLayoutCompat
@@ -35,17 +72,21 @@
                     android:weightSum="2">
 
                     <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="1dp"
-                        android:layout_height="200dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/imgDetalleItemProducto"
-                            android:layout_width="150dp"
-                            android:layout_height="100dp"
-                            android:layout_marginTop="50dp"
-                            android:layout_gravity="center" />
+                        <Button
+                            android:id="@+id/OpcionCrear"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center"
+                            android:text="CREAR"
+                            android:background="@drawable/button_rounded_border"
+                            android:textColor="#fff" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -55,29 +96,18 @@
                         android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/TituloDetalleProducto"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Titulo"
-                            android:textSize="20dp"/>
-
-                        <TextView
-                            android:id="@+id/DescripcionDetalleProducto"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Descripción" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <!--OPCIONES 5-6-->
+                <!--OPCIONES 3-4-->
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:orientation="horizontal"
-                    android:weightSum="1">
+                    android:weightSum="2">
 
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="wrap_content"
@@ -86,15 +116,23 @@
                         android:orientation="vertical">
 
                         <Button
-                            android:id="@+id/AdicionarPedido"
+                            android:id="@+id/OpcionListado"
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="5dp"
+                            android:layout_marginStart="40dp"
                             android:layout_marginLeft="5dp"
+                            android:text="VER LISTADO"
                             android:layout_gravity="center"
-                            android:text="Adicionar Pedido"
                             android:background="@drawable/button_rounded_border"
                             android:textColor="#fff" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -102,10 +140,10 @@
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
         </RelativeLayout>
 
     </ScrollView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

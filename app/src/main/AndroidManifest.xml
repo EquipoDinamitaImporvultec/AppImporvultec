@@ -12,15 +12,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
-        <activity android:name=".Menu.DetalleItemProducto"
+        <activity android:name=".MenuAdministrador.ListarProductosAdministrador"></activity>
+        <activity android:name=".MenuAdministrador.CrearProductoAdministrador" />
+        <activity
+            android:name=".MenuAdministrador.PrincipalMenuAdministrador"
             android:exported="true"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".Menu.DetalleProducto"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuAdministrador.IngresoDatosAdministrador"
             android:exported="true"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Menu.Pedidos"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuAdministrador.ProductoAdministrador"
             android:exported="true"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuAdministrador.DetalleProductorAdministrador"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Menu.DetalleItemProducto"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Menu.DetalleProducto"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Menu.Pedidos"
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Menu.Soporte"
             android:exported="true"

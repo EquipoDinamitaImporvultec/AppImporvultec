@@ -1,4 +1,4 @@
-package com.example.appimporvultec;
+package com.example.appimporvultec.MenuAdministrador;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -16,11 +16,13 @@ import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import com.bumptech.glide.Glide;
+import com.example.appimporvultec.MainActivity;
 import com.example.appimporvultec.Menu.Chat;
 import com.example.appimporvultec.Menu.Pedidos;
 import com.example.appimporvultec.Menu.Producto;
 import com.example.appimporvultec.Menu.Soporte;
-import com.example.appimporvultec.MenuAdministrador.ProductoAdministrador;
+import com.example.appimporvultec.Principal_Menu;
+import com.example.appimporvultec.R;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -33,9 +35,9 @@ import com.google.android.gms.common.api.Status;
 
 import org.jetbrains.annotations.NotNull;
 
-public class Principal_Menu extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
+public class PrincipalMenuAdministrador extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
 
-    private ImageView photoImageView, imgSoporte;
+    private ImageView photoImageView;
     private TextView nameTextView;
     private TextView emailTextView;
     private Button btnProductos, btnPedidos, btnChats, btnSoporte;
@@ -45,15 +47,16 @@ public class Principal_Menu extends AppCompatActivity implements GoogleApiClient
     private GoogleApiClient googleApiClient;
     private Soporte sop;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_principalmenu);
+        setContentView(R.layout.activity_principal_menu_administrador);
 
-        photoImageView = (ImageView) findViewById(R.id.photoimageView);
-        imgSoporte = (ImageView) findViewById(R.id.imgSoporte);
-        nameTextView = (TextView) findViewById(R.id.nametextView);
-        emailTextView = (TextView) findViewById(R.id.emailtextView);
+
+        photoImageView = (ImageView) findViewById(R.id.photoimageView_A);
+        nameTextView = (TextView) findViewById(R.id.nametextView_A);
+        emailTextView = (TextView) findViewById(R.id.emailtextView_A);
 
         //CARRUSEL
         int images[] = {R.drawable.carruselejemplo1, R.drawable.carruselejemplo2, R.drawable.carruselejemplo3};
@@ -63,10 +66,10 @@ public class Principal_Menu extends AppCompatActivity implements GoogleApiClient
         }
 
         //BOTONES
-        btnProductos = findViewById(R.id.OpcionProductos);
-        btnPedidos = findViewById(R.id.OpcionPedidos);
-        btnChats = findViewById(R.id.OpcionChats);
-        btnSoporte = findViewById(R.id.OpcionSoporte);
+        btnProductos = findViewById(R.id.OpcionProductos_A);
+        btnPedidos = findViewById(R.id.OpcionPedidos_A);
+        btnChats = findViewById(R.id.OpcionChats_A);
+        btnSoporte = findViewById(R.id.OpcionUsuarios);
 
         btnProductos.setOnClickListener(this);
         btnPedidos.setOnClickListener(this);
@@ -83,7 +86,6 @@ public class Principal_Menu extends AppCompatActivity implements GoogleApiClient
                 .enableAutoManage(this, this)
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
-
     }
 
 
@@ -143,17 +145,13 @@ public class Principal_Menu extends AppCompatActivity implements GoogleApiClient
         });
     }
 
-
-    public void revoke(View view){
-
-    }
     private void goToProductos(){
-        Intent intent = new Intent(Principal_Menu.this, Producto.class);
+        Intent intent = new Intent(getApplicationContext(), ProductoAdministrador.class);
         startActivity(intent);
     }
 
     private void goToPedidos(){
-        Intent intent = new Intent(Principal_Menu.this, Pedidos.class);
+        Intent intent = new Intent(getApplicationContext(), Pedidos.class);
         startActivity(intent);
     }
 
@@ -171,7 +169,7 @@ public class Principal_Menu extends AppCompatActivity implements GoogleApiClient
     public void onClick(View view) {
         int id = view.getId();
         switch (id) {
-            case R.id.OpcionProductos:
+            case R.id.OpcionProductos_A:
                 goToProductos();
                 break;
             case R.id.OpcionPedidos:
@@ -180,7 +178,7 @@ public class Principal_Menu extends AppCompatActivity implements GoogleApiClient
             case R.id.OpcionChats:
                 goToChats();
                 break;
-            case R.id.OpcionSoporte:
+            case R.id.OpcionUsuarios:
                 goToSoporte();
                 break;
         }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#404d5e"
-    tools:context=".Menu.DetalleItemProducto">
+    tools:context=".MenuAdministrador.CrearProductoAdministrador">
 
 
     <ScrollView
@@ -41,11 +41,12 @@
                         android:orientation="vertical">
 
                         <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/imgDetalleItemProducto"
+                            android:id="@+id/imgProducto"
                             android:layout_width="150dp"
                             android:layout_height="100dp"
                             android:layout_marginTop="50dp"
-                            android:layout_gravity="center" />
+                            android:layout_gravity="center"
+                            android:background="@drawable/carruselejemplo1"/>
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -55,18 +56,28 @@
                         android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/TituloDetalleProducto"
+                        <EditText
+                            android:id="@+id/TituloProducto"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Titulo"
+                            android:hint="Nombre"
+                            android:inputType="text"
                             android:textSize="20dp"/>
 
-                        <TextView
-                            android:id="@+id/DescripcionDetalleProducto"
+                        <EditText
+                            android:id="@+id/DescripcionProducto"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Descripción" />
+                            android:inputType="text"
+                            android:hint="Descripcion" />
+
+                        <EditText
+                            android:id="@+id/PrecioProducto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:hint="Precio" />
+
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -86,13 +97,13 @@
                         android:orientation="vertical">
 
                         <Button
-                            android:id="@+id/AdicionarPedido"
+                            android:id="@+id/GuardarRegistro"
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
                             android:layout_marginLeft="5dp"
                             android:layout_gravity="center"
-                            android:text="Adicionar Pedido"
+                            android:text="Guardar"
                             android:background="@drawable/button_rounded_border"
                             android:textColor="#fff" />
 
@@ -106,6 +117,7 @@
         </RelativeLayout>
 
     </ScrollView>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
