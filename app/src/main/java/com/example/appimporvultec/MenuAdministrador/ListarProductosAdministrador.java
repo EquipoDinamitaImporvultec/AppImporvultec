@@ -41,7 +41,7 @@ public class ListarProductosAdministrador extends AppCompatActivity {
         ListViewListarProductos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(getApplicationContext(), CrearProductoAdministrador.class);
+                Intent intent = new Intent(getApplicationContext(), DetalleListarProductosAdministrador.class);
                 intent.putExtra("objectoData", arraypureba.get(i));
                 startActivity(intent);
             }
