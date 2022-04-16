@@ -19,24 +19,20 @@ import java.util.ArrayList;
 
 public class ListarProductosAdministrador extends AppCompatActivity {
 
-
     private ListView ListViewListarProductos;
     private TextView DetalleText;
     private Adaptador adaptador;
     private ArrayList<Pruba> arraypureba;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_productos_administrador);
 
-
         ListViewListarProductos = (ListView) findViewById(R.id.listViewListar);
         arraypureba = GetArrayItems();
         adaptador = new Adaptador(this, arraypureba);
         ListViewListarProductos.setAdapter(adaptador);
-
 
         ListViewListarProductos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

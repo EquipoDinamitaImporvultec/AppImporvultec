@@ -54,6 +54,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         signInButton.setSize(SignInButton.SIZE_WIDE);
         signInButton.setColorScheme(SignInButton.COLOR_LIGHT);
 
+        retrofitIni();
+
+
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -87,39 +90,36 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
     private void handleSignInResult(GoogleSignInResult result) {
         if (result.isSuccess()){
+            System.out.println("entro aqui");
+
             GoogleSignInAccount account = result.getSignInAccount();
+            if(account.getId().equals("102745581342295278748")){
+                goToDatos2();
+            }else{
+                    Call<List<User>> call=importVultecService.doLogin();
+                    call.enqueue(new Callback<List<User>>() {
+                        @Override
+                        public void onResponse(Call<List<User>> call, Response<List<User>> response) {
+                            if(response.isSuccessful()){
+                                for (int i = 0; i < response.body().size(); i++) {
+                                    System.out.println("entro aqui");
+                                    if(response.body().get(i).getEmail().equals(account.getEmail())){
+                                        break;
 
-            Call<List<User>> call=importVultecService.doLogin();
-            call.enqueue(new Callback<List<User>>() {
-                @Override
-                public void onResponse(Call<List<User>> call, Response<List<User>> response) {
-                    if(response.isSuccessful()){
-                        for (int i = 0; i < response.body().size(); i++) {
-                            if(response.body().get(i).getEmail().equals(account.getEmail())){
-                                break;
-
-                            }else{
-                                if(account.getId().equals("102745581342295278748")){
-                                    goToDatos2();
-                                }else{
-                                    goToDatos();
+                                    }else{
+                                        goToDatos();
+                                    }
                                 }
                             }
                         }
-                    }
-                }
 
-                @Override
-                public void onFailure(Call<List<User>> call, Throwable t) {
+                        @Override
+                        public void onFailure(Call<List<User>> call, Throwable t) {
 
+                        }
+                    });
 
-
-                }
-            });
-
-
-
-
+            }
 
             //goToDatos();
         }else{
