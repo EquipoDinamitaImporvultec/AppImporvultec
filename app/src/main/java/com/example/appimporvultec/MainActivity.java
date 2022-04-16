@@ -12,6 +12,9 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.appimporvultec.MenuAdministrador.IngresoDatosAdministrador;
+import com.example.appimporvultec.Models.User;
+import com.example.appimporvultec.retrofit.ImportVulteClient;
+import com.example.appimporvultec.retrofit.ImportVultecService;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -20,11 +23,19 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
 
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class MainActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener{
 
     private GoogleApiClient googleApiClient;
     private SignInButton signInButton;
     public static final int SIGN_IN_CODE = 777;
+    ImportVulteClient importVulteClient;
+    ImportVultecService importVultecService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +63,11 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         });
     }
 
+    private void retrofitIni(){
+        importVulteClient=ImportVulteClient.getInstance();
+        importVultecService=importVulteClient.getImportVultecService();
+    }
+
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
@@ -67,14 +83,43 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         }
     }
 
+
+
     private void handleSignInResult(GoogleSignInResult result) {
         if (result.isSuccess()){
             GoogleSignInAccount account = result.getSignInAccount();
-            if(account.getId().equals("102745581342295278748")){
-                goToDatos2();
-            }else{
-                goToDatos();
-            }
+
+            Call<List<User>> call=importVultecService.doLogin();
+            call.enqueue(new Callback<List<User>>() {
+                @Override
+                public void onResponse(Call<List<User>> call, Response<List<User>> response) {
+                    if(response.isSuccessful()){
+                        for (int i = 0; i < response.body().size(); i++) {
+                            if(response.body().get(i).getEmail().equals(account.getEmail())){
+                                break;
+
+                            }else{
+                                if(account.getId().equals("102745581342295278748")){
+                                    goToDatos2();
+                                }else{
+                                    goToDatos();
+                                }
+                            }
+                        }
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<List<User>> call, Throwable t) {
+
+
+
+                }
+            });
+
+
+
+
 
             //goToDatos();
         }else{
