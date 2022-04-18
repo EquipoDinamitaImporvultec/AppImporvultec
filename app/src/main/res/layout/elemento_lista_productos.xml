@@ -24,6 +24,11 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvContenido"
             android:textSize="16dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvPrecio"
+            android:textSize="16dp"/>
     </LinearLayout>
 
 </LinearLayout>

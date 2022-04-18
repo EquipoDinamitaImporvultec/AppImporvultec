@@ -136,6 +136,7 @@ public class Principal_Menu extends AppCompatActivity implements GoogleApiClient
             public void onResult(@NonNull @NotNull Status status) {
                 if (status.isSuccess()){
                     goMainScreen();
+                    Toast.makeText(getApplicationContext(), "Cierre de Sesión", Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(getApplicationContext(), R.string.no_cierre_sesion, Toast.LENGTH_SHORT).show();
                 }

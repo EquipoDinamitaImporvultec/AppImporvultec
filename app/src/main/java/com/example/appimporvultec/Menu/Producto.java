@@ -44,7 +44,7 @@ public class Producto extends AppCompatActivity implements View.OnClickListener 
         OpTransmision.setOnClickListener(this);
     }
 
-    private void goToDetalle(String i){
+    private void goToDetalle(String i, int id_categoria){
         Intent intent = new Intent(getApplicationContext(), DetalleProducto.class);
         intent.putExtra("titulo", i);
         startActivity(intent);
@@ -55,28 +55,29 @@ public class Producto extends AppCompatActivity implements View.OnClickListener 
         int id = view.getId();
         switch (id) {
             case R.id.btnAccesorios:
-                goToDetalle("Accesorios");
+                goToDetalle("Accesorios", 1);
+
                 break;
             case R.id.btnSistemaElectrico:
-                goToDetalle("Sistema Eléctrico");
+                goToDetalle("Sistema Eléctrico",2);
                 break;
             case R.id.btnSistemaFrenos:
-                goToDetalle("Sistema de Frenos");
+                goToDetalle("Sistema de Frenos", 3);
                 break;
             case R.id.btnLlantas:
-                goToDetalle("Llantas");
+                goToDetalle("Llantas",4);
                 break;
             case R.id.btnLubricantes:
-                goToDetalle("Lubricantes");
+                goToDetalle("Lubricantes",5);
                 break;
             case R.id.btnFiltros:
-                goToDetalle("Filtros");
+                goToDetalle("Filtros",6);
                 break;
             case R.id.btnMotor:
-                goToDetalle("Sistema de Motor");
+                goToDetalle("Sistema de Motor",7);
                 break;
             case R.id.btnTransmision:
-                goToDetalle("Sistema de Transmisión");
+                goToDetalle("Sistema de Transmisión",8);
                 break;
         }
     }

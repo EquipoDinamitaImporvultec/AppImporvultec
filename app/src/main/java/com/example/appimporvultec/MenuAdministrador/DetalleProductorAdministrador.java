@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.appimporvultec.R;
 
 public class DetalleProductorAdministrador extends AppCompatActivity {
+
 
     private TextView DetalleText;
     private Button btnCrearProducto, btnListarProducto;

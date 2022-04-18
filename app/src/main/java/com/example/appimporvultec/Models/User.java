@@ -4,7 +4,7 @@ public class User {
 
     private Long id;
 
-    private Long idgoogle;
+    private String idgoogle;
 
     private String cedula;
 
@@ -13,6 +13,8 @@ public class User {
     private String email;
 
     private String rol;
+
+    private String telefono;
 
     private String urlFoto;
 
@@ -24,11 +26,11 @@ public class User {
         this.id = id;
     }
 
-    public Long getIdgoogle() {
+    public String getIdgoogle() {
         return idgoogle;
     }
 
-    public void setIdgoogle(Long idgoogle) {
+    public void setIdgoogle(String idgoogle) {
         this.idgoogle = idgoogle;
     }
 
@@ -62,6 +64,14 @@ public class User {
 
     public void setRol(String rol) {
         this.rol = rol;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
     public String getUrlFoto() {

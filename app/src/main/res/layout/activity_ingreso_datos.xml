@@ -8,7 +8,7 @@
     tools:context=".IngresoDatos">
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/editTextCedula"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -38,7 +38,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtNombres" />
 
     <EditText
-        android:id="@+id/editTextNumber2"
+        android:id="@+id/editTextCelular"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -50,7 +50,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCedula" />
 
     <TextView
         android:id="@+id/textView3"
@@ -76,7 +76,7 @@
         android:enabled="false"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCelular" />
 
     <ImageView
         android:id="@+id/imageView2"

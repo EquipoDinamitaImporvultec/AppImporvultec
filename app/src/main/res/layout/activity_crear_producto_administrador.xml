@@ -43,9 +43,9 @@
                             android:id="@+id/imgProducto"
                             android:layout_width="150dp"
                             android:layout_height="100dp"
-                            android:layout_marginTop="50dp"
                             android:layout_gravity="center"
-                            android:background="@drawable/carruselejemplo1"/>
+                            android:layout_marginTop="50dp"
+                            android:background="@drawable/carruselejemplo1" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -61,21 +61,21 @@
                             android:layout_height="wrap_content"
                             android:hint="Nombre"
                             android:inputType="text"
-                            android:textSize="20dp"/>
+                            android:textSize="20dp" />
 
                         <EditText
                             android:id="@+id/DescripcionProducto"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:inputType="text"
-                            android:hint="Descripcion" />
+                            android:hint="Descripcion"
+                            android:inputType="text" />
 
                         <EditText
                             android:id="@+id/PrecioProducto"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:inputType="numberDecimal"
-                            android:hint="Precio" />
+                            android:hint="Precio"
+                            android:inputType="numberDecimal" />
 
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -99,11 +99,11 @@
                             android:id="@+id/GuardarRegistro"
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
                             android:layout_marginStart="5dp"
                             android:layout_marginLeft="5dp"
-                            android:layout_gravity="center"
-                            android:text="Guardar"
                             android:background="@drawable/button_rounded_border"
+                            android:text="Guardar"
                             android:textColor="#fff" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
