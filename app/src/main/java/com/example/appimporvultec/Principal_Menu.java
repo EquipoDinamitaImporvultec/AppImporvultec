@@ -222,4 +222,10 @@ public class Principal_Menu extends AppCompatActivity implements GoogleApiClient
         return super.onKeyDown(keyCode, event);
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+        super.onBackPressed();
+    }
 }

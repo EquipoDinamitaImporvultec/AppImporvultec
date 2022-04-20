@@ -56,21 +56,34 @@ public class DetalleProductorAdministrador extends AppCompatActivity {
 
         }else if (a.equals("Sistema de Frenos")){
             DetalleText.setText("Sistema de Frenos");
+            btnCrearProducto.setOnClickListener(view -> {gotoCrear();});
+            btnListarProducto.setOnClickListener(view -> {gotoListar("Sistema de Frenos");});
 
         }else if (a.equals("Llantas")){
             DetalleText.setText("Llantas");
+            btnCrearProducto.setOnClickListener(view -> {gotoCrear();});
+            btnListarProducto.setOnClickListener(view -> {gotoListar("Llantas");});
 
         }else if (a.equals("Lubricantes")){
             DetalleText.setText("Lubricantes");
+            btnCrearProducto.setOnClickListener(view -> {gotoCrear();});
+            btnListarProducto.setOnClickListener(view -> {gotoListar("Lubricantes");});
+
 
         }else if (a.equals("Filtros")){
             DetalleText.setText("Filtros");
+            btnCrearProducto.setOnClickListener(view -> {gotoCrear();});
+            btnListarProducto.setOnClickListener(view -> {gotoListar("Filtros");});
 
         }else if (a.equals("Sistema de Motor")){
             DetalleText.setText("Sistema de Motor");
+            btnCrearProducto.setOnClickListener(view -> {gotoCrear();});
+            btnListarProducto.setOnClickListener(view -> {gotoListar("Sistema de Motor");});
 
         }else if (a.equals("Sistema de Transmisión")){
             DetalleText.setText("Sistema de Transmisión");
+            btnCrearProducto.setOnClickListener(view -> {gotoCrear();});
+            btnListarProducto.setOnClickListener(view -> {gotoListar("Sistema de Transmisión");});
         }
     }
 

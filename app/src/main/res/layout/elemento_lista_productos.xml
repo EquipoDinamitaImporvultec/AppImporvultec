@@ -7,26 +7,40 @@
     <ImageView
         android:layout_width="100dp"
         android:layout_height="70dp"
+        android:layout_marginTop="60dp"
         android:id="@+id/imgFoto"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="180dp"
         android:orientation="vertical"
-        android:layout_marginLeft="10dp">
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/button_rounded_border">
         <TextView
+            android:hint="TITULO"
+            android:padding="15dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:id="@+id/tvTitulo"
             android:textSize="20dp"
             android:textStyle="bold"/>
         <TextView
+            android:hint="CONTENIDO"
+            android:padding="15dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:id="@+id/tvContenido"
             android:textSize="16dp"/>
         <TextView
+            android:hint="PRECIO"
+            android:padding="15dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:id="@+id/tvPrecio"
             android:textSize="16dp"/>
     </LinearLayout>

@@ -44,11 +44,11 @@ public class Adaptador extends BaseAdapter {
         Pruba item = (Pruba) getItem(i);
 
         view = LayoutInflater.from(context).inflate(R.layout.elemento_lista_productos, null);
-        ImageView imgFoto = view.findViewById(R.id.imgFoto);
+        //ImageView imgFoto = view.findViewById(R.id.imgFoto);
         TextView lvTitulo = view.findViewById(R.id.tvTitulo);
         TextView lvDescripcion = view.findViewById(R.id.tvContenido);
 
-        imgFoto.setImageResource(item.getImgfoto());
+        //imgFoto.setImageResource(item.getImgfoto());
         lvTitulo.setText(item.getTitulo());
         lvDescripcion.setText(item.getContenido());
 

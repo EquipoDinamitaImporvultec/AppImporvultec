@@ -18,6 +18,9 @@ public class User {
 
     private String urlFoto;
 
+    public User() {
+    }
+
     public Long getId() {
         return id;
     }

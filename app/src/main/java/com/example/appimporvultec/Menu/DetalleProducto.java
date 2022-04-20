@@ -65,28 +65,6 @@ public class DetalleProducto extends AppCompatActivity {
     public void ReutilizarActivity(String a){
         if (a.equals("Accesorios")){
             DetalleText.setText("Accesorios");
-            Call<Categoria> call= categoriaService.findById(1);
-            call.enqueue(new Callback<Categoria>() {
-                @Override
-                public void onResponse(Call<Categoria> call, Response<Categoria> response) {
-                    if(response.isSuccessful()){
-
-                    }else{
-                        Categoria c = new Categoria();
-                        c.setCategoryName("Accesorios");
-                        Call<Categoria> call1 = categoriaService.createCategoria(c);
-
-                        System.out.println(response.code());
-                        System.out.println("no bro lo siento");
-
-                    }
-                }
-
-                @Override
-                public void onFailure(Call<Categoria> call, Throwable t) {
-                    Log.e("Error: ",t.toString());
-                }
-            });
 
         }else if (a.equals("Sistema Eléctrico")){
                 DetalleText.setText("Sistema Eléctrico");

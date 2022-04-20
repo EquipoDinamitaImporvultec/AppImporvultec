@@ -9,36 +9,42 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.appimporvultec.Menu.Adaptador;
-import com.example.appimporvultec.Menu.DetalleItemProducto;
-import com.example.appimporvultec.Menu.DetalleProducto;
-import com.example.appimporvultec.Menu.Pruba;
+import com.example.appimporvultec.MenuAdministrador.Adaptadores.AdaptadorAdministrador;
+import com.example.appimporvultec.Models.Productos;
 import com.example.appimporvultec.R;
+import com.example.appimporvultec.Utils.Apis;
+import com.example.appimporvultec.Utils.ProductService;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ListarProductosAdministrador extends AppCompatActivity {
 
-    private ListView ListViewListarProductos;
     private TextView DetalleText;
-    private Adaptador adaptador;
-    private ArrayList<Pruba> arraypureba;
+    List<Productos> productos = new ArrayList<Productos>();
+    ListView listViewAdmin = null;
+    AdaptadorAdministrador adapter = null;
+    private ProductService productService = Apis.getProductoService();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_productos_administrador);
 
-        ListViewListarProductos = (ListView) findViewById(R.id.listViewListar);
-        arraypureba = GetArrayItems();
-        adaptador = new Adaptador(this, arraypureba);
-        ListViewListarProductos.setAdapter(adaptador);
+        adapter = new AdaptadorAdministrador(this, R.layout.elemento_lista_productos, productos);
+        listViewAdmin = (ListView) findViewById(R.id.listViewListarAdmin);
+        listViewAdmin.setAdapter(adapter);
+        cargarProductos();
 
-        ListViewListarProductos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listViewAdmin.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(getApplicationContext(), DetalleListarProductosAdministrador.class);
-                intent.putExtra("objectoData", arraypureba.get(i));
+                intent.putExtra("objectoData", productos.get(i).getId_producto());
                 startActivity(intent);
             }
         });
@@ -48,15 +54,24 @@ public class ListarProductosAdministrador extends AppCompatActivity {
 
     }
 
+    public void cargarProductos(){
+        Call<List<Productos>> call = productService.getProductos();
+        call.enqueue(new Callback<List<Productos>>() {
+            @Override
+            public void onResponse(Call<List<Productos>> call, Response<List<Productos>> response) {
+                List<Productos> data = response.body();
+                productos.addAll(data);
+                System.out.println(response.body().get(1).getDescription());
+                adapter.notifyDataSetChanged();
+                System.out.println("MUESTRATE");
+            }
 
-    private ArrayList<Pruba> GetArrayItems(){
-        ArrayList<Pruba> listItems = new ArrayList<>();
-        listItems.add(new Pruba(R.drawable.carruselejemplo2, "Titulo", "Descripcion"));
-        listItems.add(new Pruba(R.drawable.carruselejemplo3, "Titulo2", "Descripcio2"));
+            @Override
+            public void onFailure(Call<List<Productos>> call, Throwable t) {
 
-        return listItems;
+            }
+        });
     }
-
 
     public void ReutilizarActivity(String a){
         if (a.equals("Accesorios")){

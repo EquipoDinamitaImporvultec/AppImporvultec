@@ -127,6 +127,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                                         intent.putExtra("Nombre", response.body().getName());
                                         intent.putExtra("Foto", response.body().getUrlFoto());
                                         startActivity(intent);
+                                        finish();
                                     }else {
                                         System.out.println("Lo logro amigo lo logro: " + "\n" + response.body().getName() + " " + response.body().getEmail());
                                         Intent intent = new Intent(getApplicationContext(), Principal_Menu.class);
@@ -134,6 +135,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                                         intent.putExtra("Nombre", response.body().getName());
                                         intent.putExtra("Foto", response.body().getUrlFoto());
                                         startActivity(intent);
+                                        finish();
                                     }
                                 }else{
 

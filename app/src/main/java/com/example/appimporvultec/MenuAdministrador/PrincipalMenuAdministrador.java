@@ -161,8 +161,8 @@ public class PrincipalMenuAdministrador extends AppCompatActivity implements Goo
         startActivity(intent);
     }
 
-    private void goToSoporte(){
-        Intent intent = new Intent(getApplicationContext(), Soporte.class);
+    private void goToUsuarios(){
+        Intent intent = new Intent(getApplicationContext(), ListarUsuarios.class);
         startActivity(intent);
     }
 
@@ -180,7 +180,7 @@ public class PrincipalMenuAdministrador extends AppCompatActivity implements Goo
                 goToChats();
                 break;
             case R.id.OpcionUsuarios:
-                goToSoporte();
+                goToUsuarios();
                 break;
         }
     }
@@ -218,6 +218,14 @@ public class PrincipalMenuAdministrador extends AppCompatActivity implements Goo
             builder.show();
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+        super.onBackPressed();
     }
 
 }

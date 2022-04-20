@@ -1,5 +1,6 @@
 package com.example.appimporvultec.Models;
 
+
 public class Productos {
 
     private Long id_producto;
