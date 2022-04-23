@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -25,6 +26,7 @@ import retrofit2.Response;
 public class ListarProductosAdministrador extends AppCompatActivity {
 
     private TextView DetalleText;
+    private TextView nom;
     List<Productos> productos = new ArrayList<Productos>();
     ListView listViewAdmin = null;
     AdaptadorAdministrador adapter = null;
@@ -35,19 +37,12 @@ public class ListarProductosAdministrador extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_productos_administrador);
 
+
         adapter = new AdaptadorAdministrador(this, R.layout.elemento_lista_productos, productos);
         listViewAdmin = (ListView) findViewById(R.id.listViewListarAdmin);
+        nom = (TextView) findViewById(R.id.tvTitulo);
         listViewAdmin.setAdapter(adapter);
         cargarProductos();
-
-        listViewAdmin.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(getApplicationContext(), DetalleListarProductosAdministrador.class);
-                intent.putExtra("objectoData", productos.get(i).getId_producto());
-                startActivity(intent);
-            }
-        });
 
         DetalleText = findViewById(R.id.textViewTituloListar);
         ReutilizarActivity(getIntent().getStringExtra("titulo"));

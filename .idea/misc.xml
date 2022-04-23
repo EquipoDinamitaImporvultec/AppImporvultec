@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/David/AndroidStudioProjects/AppImporvultec/app/src/main/res/drawable/background_chat_input.xml" value="0.1" />
         <entry key="..\:/Users/David/AndroidStudioProjects/AppImporvultec/app/src/main/res/layout/activity_chat.xml" value="0.29322916666666665" />
         <entry key="..\:/Users/David/AndroidStudioProjects/AppImporvultec/app/src/main/res/layout/activity_crear_producto_administrador.xml" value="0.29322916666666665" />
+        <entry key="..\:/Users/David/AndroidStudioProjects/AppImporvultec/app/src/main/res/layout/activity_detalle_item_producto.xml" value="0.29322916666666665" />
         <entry key="..\:/Users/David/AndroidStudioProjects/AppImporvultec/app/src/main/res/layout/activity_detalle_listar_productos_administrador.xml" value="0.29322916666666665" />
         <entry key="..\:/Users/David/AndroidStudioProjects/AppImporvultec/app/src/main/res/layout/activity_detalle_producto.xml" value="0.29322916666666665" />
         <entry key="..\:/Users/David/AndroidStudioProjects/AppImporvultec/app/src/main/res/layout/activity_detalle_productor_administrador.xml" value="0.29322916666666665" />

@@ -8,104 +8,103 @@
     tools:context=".Menu.DetalleItemProducto">
 
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
+    <EditText
+        android:id="@+id/TituloDetalleProducto"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:maxLength="10"
+        android:inputType="text"
+        android:hint="Nombre del Producto"
+        android:enabled="false"
+        android:backgroundTint="#25CD8A"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/imgDetalleItemProducto" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:ignore="MissingConstraints">
+    <EditText
+        android:id="@+id/DescripcionDetalleProducto"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:maxLength="10"
+        android:inputType="text"
+        android:enabled="false"
+        android:hint="Descripción del Producto"
+        android:backgroundTint="#25CD8A"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/TituloDetalleProducto" />
 
-            <!--DATOS RECUPERADOS-->
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="100dp"
-                android:orientation="vertical"
-                android:padding="10dp">
+    <EditText
+        android:id="@+id/PrecioProducto"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:hint="Precio del Producto"
+        android:backgroundTint="#25CD8A"
+        android:enabled="false"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/DescripcionDetalleProducto" />
 
-                <!--OPCIONES 1-2-->
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:orientation="horizontal"
-                    android:weightSum="2">
+    <ImageView
+        android:id="@+id/imgDetalleItemProducto"
+        android:layout_width="122dp"
+        android:layout_height="196dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:srcCompat="@drawable/datos" />
 
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="1dp"
-                        android:layout_height="200dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/imgDetalleItemProducto"
-                            android:layout_width="150dp"
-                            android:layout_height="100dp"
-                            android:layout_marginTop="50dp"
-                            android:layout_gravity="center" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="7dp" />
 
-                    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="395dp" />
 
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="715dp" />
 
-                        <TextView
-                            android:id="@+id/TituloDetalleProducto"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Titulo"
-                            android:textSize="20dp"/>
-
-                        <TextView
-                            android:id="@+id/DescripcionDetalleProducto"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Descripción" />
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-
-                </androidx.appcompat.widget.LinearLayoutCompat>
-
-                <!--OPCIONES 5-6-->
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
-
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <Button
-                            android:id="@+id/AdicionarPedido"
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="5dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_gravity="center"
-                            android:text="Adicionar Pedido"
-                            android:background="@drawable/button_rounded_border"
-                            android:textColor="#fff" />
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-
-                </androidx.appcompat.widget.LinearLayoutCompat>
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-        </RelativeLayout>
-
-    </ScrollView>
+    <Button
+        android:id="@+id/GuardarRegistro"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_rounded"
+        android:text="ADICIONAR PEDIDO"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/PrecioProducto"
+        app:layout_constraintVertical_bias="0.428" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

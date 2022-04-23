@@ -11,7 +11,7 @@ public class Apis {
     }
 
     public static ProductService getProductoService(){
-        return Producto.getProducto(URL).create(ProductService.class);
+        return Cliente.getCliente(URL).create(ProductService.class);
     }
 
     public static CategoriaService getCategoriaService(){

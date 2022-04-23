@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:ems="10"
-        android:maxLength="10"
+        android:maxLength="200"
         android:inputType="text"
         android:hint="Descripción del Producto"
         android:backgroundTint="#25CD8A"

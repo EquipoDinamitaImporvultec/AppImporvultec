@@ -11,10 +11,22 @@
         android:id="@+id/imgFoto"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="250dp"
         android:orientation="vertical"
         android:layout_marginLeft="5dp"
         android:background="@drawable/button_rounded_border">
+
+        <TextView
+            android:hint="ID"
+            android:padding="15dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:id="@+id/tvID"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+
         <TextView
             android:hint="TITULO"
             android:padding="15dp"

@@ -8,6 +8,8 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
+import retrofit2.http.Path;
 
 public interface ProductService {
 
@@ -16,4 +18,7 @@ public interface ProductService {
 
     @POST("api/products")
     Call<Productos> createProductosCall(@Body Productos productos);
+
+    @PUT("api/products/{id}")
+    Call<Productos> update(@Body Productos productos,@Path("id") int id);
 }
