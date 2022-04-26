@@ -4,7 +4,7 @@ import com.example.appimporvultec.Models.Categoria;
 
 public class Apis {
 
-    public static final String URL="http://192.168.18.9:8080/";
+    public static final String URL="http://192.168.0.133:8080/";
 
     public static UserService getPersonaService(){
         return Cliente.getCliente(URL).create(UserService.class);

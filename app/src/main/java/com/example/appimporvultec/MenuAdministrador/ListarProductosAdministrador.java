@@ -55,6 +55,10 @@ public class ListarProductosAdministrador extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<Productos>> call, Response<List<Productos>> response) {
                 List<Productos> data = response.body();
+                for (int i = 0; i < response.body().size(); i++) {
+                    System.out.println(response.body().get(i).toString());
+
+                }
                 productos.addAll(data);
                 System.out.println(response.body().get(1).getDescription());
                 adapter.notifyDataSetChanged();

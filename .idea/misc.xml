@@ -19,8 +19,12 @@
         <entry key="..\:/Users/David/AndroidStudioProjects/AppImporvultec/app/src/main/res/layout/elemento_lista_productos.xml" value="0.2310126582278481" />
         <entry key="..\:/Users/David/AndroidStudioProjects/AppImporvultec/app/src/main/res/layout/elemento_lista_usuario.xml" value="0.29322916666666665" />
         <entry key="..\:/Users/edigo/Documents/Proyectos/AppImporvultec/app/src/main/res/layout/activity_bienvenida.xml" value="0.3625" />
+        <entry key="..\:/Users/edigo/Documents/Proyectos/AppImporvultec/app/src/main/res/layout/activity_crear_producto_administrador.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/edigo/Documents/Proyectos/AppImporvultec/app/src/main/res/layout/activity_detalle_producto.xml" value="0.3625" />
+        <entry key="..\:/Users/edigo/Documents/Proyectos/AppImporvultec/app/src/main/res/layout/activity_detalle_productor_administrador.xml" value="0.3625" />
         <entry key="..\:/Users/edigo/Documents/Proyectos/AppImporvultec/app/src/main/res/layout/activity_ingreso_datos.xml" value="0.3625" />
         <entry key="..\:/Users/edigo/Documents/Proyectos/AppImporvultec/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/Users/edigo/Documents/Proyectos/AppImporvultec/app/src/main/res/layout/activity_producto_administrador.xml" value="0.3625" />
       </map>
     </option>
   </component>

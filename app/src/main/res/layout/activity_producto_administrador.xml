@@ -28,6 +28,8 @@
                 android:padding="10dp">
 
                 <!--MAS DATOS-->
+
+
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -46,8 +48,8 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="CATEGORÍAS"
-                            android:textSize="20dp"
-                            android:textColor="#25CD8A" />
+                            android:textColor="#25CD8A"
+                            android:textSize="20dp" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -73,9 +75,9 @@
                             android:id="@+id/btnAccesorios_A"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Accesorios"
                             android:background="#404d5e"
                             android:drawableTop="@drawable/accesorios"
+                            android:text="Accesorios"
                             android:textColor="#fff" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -92,9 +94,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
                             android:layout_marginLeft="5dp"
-                            android:text="Sistema Eléctrico"
-                            android:drawableTop="@drawable/bateria"
                             android:background="#404d5e"
+                            android:drawableTop="@drawable/bateria"
+                            android:text="Sistema Eléctrico"
                             android:textColor="#fff" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -119,9 +121,9 @@
                             android:id="@+id/btnSistemaFrenos_A"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Sistema de Frenos"
-                            android:drawableTop="@drawable/freno"
                             android:background="#404d5e"
+                            android:drawableTop="@drawable/freno"
+                            android:text="Sistema de Frenos"
                             android:textColor="#fff" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -138,9 +140,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
                             android:layout_marginLeft="5dp"
-                            android:text="Llantas"
-                            android:drawableTop="@drawable/neumatico"
                             android:background="#404d5e"
+                            android:drawableTop="@drawable/neumatico"
+                            android:text="Llantas"
                             android:textColor="#fff" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -151,8 +153,8 @@
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:layout_marginTop="40dp"
+                    android:orientation="horizontal"
                     android:weightSum="2">
 
                     <androidx.appcompat.widget.LinearLayoutCompat
@@ -165,9 +167,9 @@
                             android:id="@+id/btnLubricantes_A"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Lubricantes"
-                            android:drawableTop="@drawable/gasolina"
                             android:background="#404d5e"
+                            android:drawableTop="@drawable/gasolina"
+                            android:text="Lubricantes"
                             android:textColor="#fff" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -185,9 +187,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
                             android:layout_marginLeft="5dp"
-                            android:text="Filtros"
-                            android:drawableTop="@drawable/filtro"
                             android:background="#404d5e"
+                            android:drawableTop="@drawable/filtro"
+                            android:text="Filtros"
                             android:textColor="#fff" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -198,8 +200,8 @@
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:layout_marginTop="40dp"
+                    android:orientation="horizontal"
                     android:weightSum="2">
 
                     <androidx.appcompat.widget.LinearLayoutCompat
@@ -212,12 +214,13 @@
                             android:id="@+id/btnMotor_A"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Sistema de Motor"
-                            android:drawableTop="@drawable/piston"
                             android:background="#404d5e"
+                            android:drawableTop="@drawable/piston"
+                            android:text="Sistema de Motor"
                             android:textColor="#fff" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
+
 
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="wrap_content"
@@ -232,12 +235,13 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
                             android:layout_marginLeft="5dp"
-                            android:text="Sistema Transmisión"
-                            android:drawableTop="@drawable/transmision"
                             android:background="#404d5e"
+                            android:drawableTop="@drawable/transmision"
+                            android:text="Sistema Transmisión"
                             android:textColor="#fff" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
+
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 

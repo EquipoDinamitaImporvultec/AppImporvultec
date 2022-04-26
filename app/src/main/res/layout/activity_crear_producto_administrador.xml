@@ -11,14 +11,14 @@
         android:id="@+id/TituloProducto"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:maxLength="10"
-        android:inputType="text"
-        android:hint="Nombre del Producto"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#25CD8A"
+        android:ems="10"
+        android:hint="Nombre del Producto"
+        android:inputType="text"
+        android:maxLength="10"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -106,13 +106,21 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="GUARDAR"
         android:background="@drawable/button_rounded"
+        android:text="GUARDAR"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/PrecioProducto"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.82" />
+
+    <Spinner
+        android:id="@+id/spinnercategoria"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/GuardarRegistro"
+        app:layout_constraintTop_toBottomOf="@+id/PrecioProducto"
+        tools:layout_editor_absoluteX="1dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
