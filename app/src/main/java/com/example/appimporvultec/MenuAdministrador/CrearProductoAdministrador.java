@@ -113,6 +113,7 @@ public class CrearProductoAdministrador extends AppCompatActivity implements Vie
         p.setName(nombre.getText().toString());
         p.setDescription(descripcion.getText().toString());
         p.setPrice(Double.parseDouble(precio.getText().toString()));
+        p.setId_categoria(Long.parseLong(spinnercategorias.getSelectedItem().toString().charAt(0)+""));
         crearProducto(p);
     }
 
